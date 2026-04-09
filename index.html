@@ -2,24 +2,239 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Fresh Harvest Box is a fruit shop that offers a wide variety of fresh and delicious fruits. We source our fruits from local farmers and ensure that they are of the highest quality. Our mission is to provide our customers with the freshest and tastiest fruits while supporting local agriculture."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Fruit Shop</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">How it Works</a></li>
-          <li><a href="/about">Fruits</a></li>
-          <li><a href="/contacts">Contacts</a></li>
-        </ul>
-      </nav>
-      <a href="/"><img src="./image/logo.svg" alt="site logo" />HARVEST BOX</a>
-      <img src="./image/bag.svg" alt="bag" />
+    <header class="header">
+      <div class="container header-container">
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="link-navigation" href="/">Home</a>
+            </li>
+            <li class="navigation-item">
+              <a class="link-navigation" href="/">How it Works</a>
+            </li>
+            <li class="navigation-item">
+              <a class="link-navigation" href="/about">Fruits</a>
+            </li>
+            <li class="navigation-item">
+              <a class="link-navigation" href="/contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="link-logo" href="/"
+          ><img src="./image/logo.svg" alt="site logo" />FRESH HARVEST BOX</a
+        >
+        <a class="link-bag" href="/"><img src="./image/bag.svg" alt="bag" /></a>
+      </div>
     </header>
     <main>
-      <section></section>
+      <section class="hero">
+        <div class="container hero-container">
+          <h1 class="hero-title">
+            Fresh Harvest Box is your one-stop place for a delicious fruit
+            basket
+          </h1>
+          <img
+            class="hero-image"
+            src="./image/hero/bananes.png"
+            alt="bananas"
+          />
+          <p class="hero-description">
+            Our expertly curated fruit baskets are made with the freshest,
+            highest quality fruits available. Whether you are looking for a
+            healthy snack or a gift for a loved one, Fresh Harvest Box has got
+            you covered.
+          </p>
+          <img
+            class="hero-image"
+            src="./image/hero/woman-white-t-shirt-holding-tasty-oranges-pink-background 1.jpg"
+            alt="woman holding oranges"
+          />
+          <a class="link-hero" href="/">Shop Now</a>
+          <img
+            class="hero-image"
+            src="./image/hero/strawberry.png"
+            alt="strawberry"
+          />
+          <img
+            class="hero-image"
+            src="./image/hero/basket of strawberries.png"
+            alt="fruit basket"
+          />
+          <ul>
+            <li><a class="link-hero" href="/">#ORGANIC</a></li>
+            <li><a class="link-hero" href="/">#PRODUCTS</a></li>
+            <li><a class="link-hero" href="/">#BASKET</a></li>
+            <li><a class="link-hero" href="/">FRUITS</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="order">
+        <div class="container order-container">
+          <h2 class="order-title">
+            To order your fruit basket, simply follow these easy steps
+          </h2>
+          <p class="order-description">
+            Our baskets are assembled with care and delivered straight to your
+            doorstep, so you can enjoy the taste of fresh fruit without ever
+            leaving your home. Whether you're looking for a healthy snack or a
+            thoughtful gift, our fruit baskets are the perfect choice.
+          </p>
+          <ul class="order-list">
+            <li class="order-item">
+              <h3>First Step</h3>
+              <p>
+                Just choose the fruit you want to order by clicking on the
+                checkboxes next to it.
+              </p>
+            </li>
+            <li class="order-item">
+              <h3>Second Step</h3>
+              <p>Click on the basket and fill out the form.</p>
+            </li>
+            <li class="order-item">
+              <h3>Third Step</h3>
+              <p>
+                Sit back and relax! Your fresh fruit basket will be delivered.
+              </p>
+            </li>
+          </ul>
+          <img
+            class="order-image"
+            src="./image/hero/black currant.png"
+            alt="black currant"
+          />
+        </div>
+      </section>
+      <section class="about">
+        <div class="container about-container">
+          <h2 class="about-title">ORGANIC fRUITS</h2>
+          <p class="about-description">
+            Our organic fruits are hand-picked from local farms and delivered straight to your doorstep, ensuring that you get the freshest and most nutritious produce possible. We offer a wide selection of organic fruits grown without the use of harmful pesticides or chemicals.
+          </p>
+          <ul class="about-list">
+            <li>
+                <h3>Strawberry</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/klubnika.png" alt="strawberry">
+                            <p></p>
+                        </img>
+                        <p>10$/kg</p> 
+                    
+                
+            </li>
+            <li>
+                <h3>Banana</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/banany.png" alt="bananas">
+                            
+                        </img>
+                        <p>5$/kg</p>
+                    
+                
+            </li>
+            <li>
+                <h3>Watermelon</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/arbuzy.png" alt="watermelon">
+                            
+                        </img>
+                        <p>8$/kg</p>
+                
+            </li>
+            <li>
+                <h3>Lime</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/lime.png" alt="lime">
+                            
+                        </img>
+                        <p>12$/kg</p>
+                   
+            </li>
+            <li>
+                <h3>Apple</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/apple.png" alt="apple">
+                            
+                        </img>
+                    <p>6$/kg</p>
+                
+                    </li>
+                    <li>
+                        <h3>Peach</h3>
+                            <p>Plant</p>
+                    
+                        <img src="./image/about/persik.png" alt="peach">
+                            
+                        </img>
+                    <p>7$/kg</p>
+                
+            </li>
+            <li>
+                <h3>Plum</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/sliva.png" alt="plums">
+                            
+                        </img>
+                    <p>3$/kg</p>
+                
+            </li>
+            <li>
+                <h3>Orange</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/orang.png" alt="orange">
+                            
+                        </img>
+                    <p>4$/kg</p>
+                
+            </li>
+            <li>
+                <h3>Kiwi</h3>
+                    <p>Plant</p>
+                        <img src="./image/about/kiwi.png" alt="kiwi">
+                            
+                        </img>
+                    <p>9$/kg</p>
+                
+            </li>
+            <button class="link-about" type="button">Order</button>
+</section>
+<section class="advantages">
+    <div class="container advantages-container">
+        <h2 class="advantages-title">Fresh Harvest Box has got you covered </h2>
+        <ul>
+            <li><img src="./image/advantages/melon.jpg" alt="Melon"></li>
+            <li><img src="./image/advantages/blueberry.jpg" alt="Blueberry"></li>
+            
+        </ul>
+        <p class="advantages-description">Our boxes are packed with delicious, nutritious fruits and vegetables, perfect for anyone looking to eat healthier or support local farmers. Order your box today and start enjoying the best that nature has to offer! 
+<form class="advantages-form">
+    <input class="advantages-input" type="text" placeholder="Enter your email address">
+    <button class="advantages-button" type="submit">Send</button>
+</form>
+</section>
     </main>
     <footer></footer>
   </body>
