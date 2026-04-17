@@ -168,7 +168,7 @@ img {
   letter-spacing: -0.01em;
   text-align: center;
   text-transform: uppercase;
-  angle: 0 deg;
+
   opacity: 1;
   transform: rotate(-14deg);
   border-radius: 50%;
@@ -307,15 +307,141 @@ img {
 .about-container {
 }
 .about-title {
+  display: block;
   max-width: 624px;
   margin: 0 auto;
+
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 40px;
+
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+
+  text-align: center;
+
+  text-transform: uppercase;
 }
 .about-text {
+  max-width: 547px;
+  margin: 0 auto;
   margin-top: 14px;
+
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+
+  text-align: center;
+  margin-bottom: 44px;
 }
 .about-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
-.link-about {
+.about-item {
+  border-radius: 20px;
+  padding: 64px 47px 24px 24px;
+}
+.about-item:nth-child(1) {
+  background-color: rgba(248, 118, 107, 1);
+} /* Клубника */
+.about-item:nth-child(2) {
+  background-color: rgba(237, 210, 81, 1);
+} /* Банан */
+.about-item:nth-child(3) {
+  background-color: rgba(157, 194, 98, 1);
+} /* Арбуз */
+.about-item:nth-child(4) {
+  background-color: rgba(191, 214, 99, 1);
+} /* Лайм */
+.about-item:nth-child(5) {
+  background-color: rgba(233, 63, 41, 1);
+} /* Яблоко */
+.about-item:nth-child(6) {
+  background-color: rgba(219, 79, 75, 1);
+} /* Персик */
+.about-item:nth-child(7) {
+  background-color: rgba(155, 83, 102, 1);
+} /* Слива */
+.about-item:nth-child(8) {
+  background-color: rgba(244, 127, 76, 1);
+} /* Апельсин */
+.about-item:nth-child(9) {
+  background-color: rgba(152, 179, 126, 1);
+} /* Киви */
+.about-subtitle {
+  margin-bottom: 7px;
+
+  font-weight: 700;
+  font-size: 32px;
+
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.about-plant {
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.about-img {
+  margin-bottom: 4px;
+}
+.about-price {
+  display: flex;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--background-color);
+  width: 136px;
+  height: 48px;
+  opacity: 1;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 200px;
+  padding: 12px 21px;
+  background-color: var(--primary-color);
+}
+.about-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 44px;
+  padding: 38px 18px;
+  width: 114px;
+  height: 114px;
+  background-color: var(--button-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 500px;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  opacity: 1;
+  transform: rotate(-14deg);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 
 /* --------ADVANTAGES-------- */
