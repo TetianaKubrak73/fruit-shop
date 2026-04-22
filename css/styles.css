@@ -46,9 +46,20 @@ img {
   margin: 0 auto;
   padding-left: 32px;
   padding-right: 32px;
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
 }
 
+/*----------------Анимация------------------*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* -----HEADER----- */
 
 .header {
@@ -82,7 +93,6 @@ img {
 
   line-height: 1.3;
   letter-spacing: -0.03em;
-  /* text-align: center; */
 }
 .link-navigation {
   color: var(--background-color);
@@ -131,8 +141,137 @@ img {
 }
 
 .hero-container {
+  /* display: flex;
+  flex-direction: row; */
 }
+/* .hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 103px;
+} */
+.hero-content {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 103px;
+}
+/* Общие настройки контейнеров блоков для позиционирования фруктов внутри них */
+.hero-left,
+.hero-right {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+.hero-left {
+  align-items: flex-end;
+}
+.hero-right {
+  align-items: flex-center;
+}
+
+/* Летающие бананы в левом блоке */
+.hero-floating-bananas {
+  position: absolute;
+  top: -80px; /* Поднимаем выше текста */
+  left: 120px; /* Сдвигаем немного влево */
+  width: 183px;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+/* Летающая клубника в правом блоке */
+.hero-floating-strawberry {
+  position: absolute;
+  top: -120px; /* Над желтой карточкой */
+  right: 10px; /* Сдвигаем ближе к центру или краю */
+  width: 120px;
+  transform: rotate(10deg);
+  z-index: 2;
+}
+
+/* Стили карточек (корзинка и арбуз) */
+.hero-card {
+  width: 250px;
+  padding: 24px;
+  border-radius: 500px;
+  text-align: center;
+  z-index: 1;
+}
+
+.green-card {
+  background-color: #85be48;
+  padding: 28px 25px 40px 24px;
+}
+.yellow-card {
+  background-color: #f7d046;
+  padding: 28px 44px 40px 43px;
+  margin-bottom: 44px;
+  margin-top: 74px;
+}
+.card-title {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: center;
+  vertical-align: middle;
+}
+.card-img {
+  width: 100%;
+  max-width: 249px;
+  height: auto;
+  margin-bottom: 44px;
+}
+.left-card-img {
+  margin-bottom: 2px;
+  margin-top: 61px;
+}
+.right-card-img {
+  margin-bottom: 17px;
+  margin-top: 19px;
+}
+
+/* Центральный блок с овальным фото */
+.hero-center {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-image-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 452px;
+  height: 702px;
+  border-radius: 500px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: -120px; /* Поднимаем выше текста */
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 20%;
+  /* transform: scale(1.05); */
+  display: block;
+}
+
 .hero-title {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -40px;
   max-width: 898px;
   margin: 0 auto;
   font-weight: 500;
@@ -144,10 +283,12 @@ img {
   vertical-align: middle;
   text-transform: uppercase;
 }
+
 .hero-image {
 }
-.hero-description {
+.hero-text-small {
   max-width: 222px;
+  margin-top: 146px;
   margin-bottom: 44px;
 
   font-size: 14px;
@@ -156,7 +297,27 @@ img {
   letter-spacing: -0.03em;
   text-align: left;
 }
+.hero-card-text {
+  max-width: 163px;
+
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 12px;
+
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .button-hero {
+  position: absolute;
+  z-index: 5;
+  bottom: -20px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(-14deg);
   width: 114px;
   height: 114px;
   background-color: var(--primary-color);
@@ -170,13 +331,20 @@ img {
   text-transform: uppercase;
 
   opacity: 1;
-  transform: rotate(-14deg);
+
   border-radius: 50%;
   border: none;
   cursor: pointer;
 }
+.button-hero:hover {
+  /* Мы сохраняем твои центровку и поворот, добавляя scale */
+  transform: translateX(-50%) rotate(-14deg) scale(1.1);
+  color: var(--button-color);
+  box-shadow: 0 0 20px rgba(255, 107, 8, 0.4);
+}
 .hero-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -184,19 +352,50 @@ img {
 }
 .hero-item {
   gap: 8px;
+  opacity: 0; /* Изначально скрываем, чтобы они не «мигали» перед началом */
+  animation: fadeInUp 0.5s ease-out forwards;
 }
-.link-hero {
+/* Назначаем разную задержку (delay) для каждого элемента */
+.hero-item:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.hero-item:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.hero-item:nth-child(3) {
+  animation-delay: 1s;
+}
+.hero-item:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.hero-tag {
   color: var(--primary-color);
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 1000px;
-  /* Автолейаут */
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
-  padding: 12px 32px 12px 32px;
+
+  padding: 12px 32px;
+
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 12px;
+
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.hero-tag:hover {
+  transform: scale(1.1);
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 /*-------ORDER---------- */
