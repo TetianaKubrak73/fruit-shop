@@ -23,6 +23,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -54,7 +58,7 @@
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <h1 class="hero-title">
+          <h1 class="hero-title animate__animated animate__zoomIn">
             Fresh Harvest Box is your one-stop place for a delicious fruit
             basket
           </h1>
@@ -180,7 +184,7 @@
           </ul>
           <img
             class="order-image"
-            src="./image/order/b08c27c6d1b10426e78244d4ff8987ecdcfb2d54.gif"
+            src="./image/order/black-cur.gif"
             alt="black currant"
           />
         </div>
@@ -289,7 +293,7 @@
               <p class="about-price">90 UAH/kg</p>
             </li>
           </ul>
-          <button class="about-button" type="button">
+          <button class="about-button" type="button" data-modal-open>
             <svg class="about-button-icon" width="14" height="14">
               <use href="./image/icons.svg#icon-arrow"></use>
             </svg>
@@ -299,7 +303,7 @@
       </section>
       <section class="advantages">
         <div class="container advantages-container">
-          <h2 class="advantages-title">
+          <h2 class="advantages-title animate__lightSpeedInRight">
             Fresh Harvest Box has got you covered
           </h2>
           <ul class="advantages-list">
@@ -409,5 +413,101 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="28" height="28">
+            <use href="./image/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <h2 class="modal-title">Your Order</h2>
+
+          <!-- Сетка выбора корзин -->
+          <ul class="order-selection-list">
+            <li class="selection-item strawberry-bg">
+              <h3 class="selection-name">Strawberry Basket</h3>
+              <p class="selection-type">Plant</p>
+              <img
+                src="./image/modal/strawberry-basket.png"
+                alt="Strawberry"
+                class="selection-img"
+              />
+              <input type="checkbox" class="selection-check" checked />
+            </li>
+            <li class="selection-item apple-bg">
+              <h3 class="selection-name">Apple Basket</h3>
+              <p class="selection-type">Plant</p>
+              <img
+                src="./image/modal/apple-basket.png"
+                alt="Apple"
+                class="selection-img"
+              />
+              <input type="checkbox" class="selection-check" />
+            </li>
+            <li class="selection-item fruits-bg">
+              <h3 class="selection-name">Fruits Basket</h3>
+              <p class="selection-type">Plant</p>
+              <img
+                src="./image/modal/fruits-basket.png"
+                alt="Fruits"
+                class="selection-img"
+              />
+              <input type="checkbox" class="selection-check" />
+            </li>
+          </ul>
+
+          <!-- Нижняя часть: Форма + Девушка -->
+          <div class="modal-bottom-wrap">
+            <form class="modal-form">
+              <input
+                type="text"
+                class="modal-input"
+                placeholder="Enter full name..."
+              />
+              <input
+                type="email"
+                class="modal-input"
+                placeholder="Enter email..."
+              />
+              <input
+                type="text"
+                class="modal-input"
+                placeholder="Enter card..."
+              />
+              <textarea
+                class="modal-textarea"
+                placeholder="Enter comments..."
+              ></textarea>
+              <button type="submit" class="modal-submit-btn">Submit</button>
+            </form>
+
+            <div class="modal-image-decor">
+              <img
+                src="./image/modal/woman-with-bananas.png"
+                alt="Woman"
+                class="woman-decor"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Контент "Спасибо за заказ", изначально скрыт -->
+        <div class="modal-success is-hidden">
+          <img
+            src="./image/modal/raspberry.png"
+            alt="Raspberry"
+            class="success-img"
+          />
+          <h2 class="success-title">THANK YOU</h2>
+          <p class="success-text">
+            Thank you for your order! Our team is preparing your box with fresh,
+            delicious fruits and vegetables, and we'll deliver it straight to
+            your doorstep. We appreciate your business and look forward to
+            providing you with the best possible experience!
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
