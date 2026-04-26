@@ -1160,7 +1160,10 @@ body.no-scroll {
   height: 120px;
   resize: none;
 }
-
+.modal-input,
+.modal-textarea:focus-within {
+  border-color: var(--button-color);
+}
 .modal-submit-btn {
   width: fit-content;
   padding: 14px 40px;
@@ -1172,7 +1175,11 @@ body.no-scroll {
   cursor: pointer;
   margin-top: 10px;
 }
-
+.modal-submit-btn:hover {
+  background-color: var(--primary-color); /* Темнее при наведении */
+  color: var(--button-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
 /* Фото девушки в углу */
 .modal-image-decor {
   position: absolute;
