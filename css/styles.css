@@ -140,6 +140,10 @@ img {
 }
 
 .link-bag {
+  position: relative; /* Чтобы счётчик позиционировался относительно ссылки */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 28px;
   height: 28px;
   color: var(--background-color);
@@ -150,10 +154,55 @@ img {
   transition: transform 0.3s ease;
   box-shadow: 0 0 20px rgba(242, 238, 235, 0.4);
 }
+
 .bag-icon {
+  display: block;
   width: 28px;
   height: 28px;
-  fill: var(--background-color);
+  fill: currentColor;
+}
+.bag-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 2px;
+
+  background-color: #ef445b;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  /* Гарантируем, что нолик не перекроет всё своим размером */
+  box-sizing: border-box;
+
+  /* Управление видимостью */
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  /* Чтобы нолик не мешал кликать по корзине */
+  pointer-events: none;
+}
+
+/* 4. Класс для скрытия */
+.bag-count.is-empty {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Эффект пульсации при обновлении цифры */
+.bag-count.bump {
+  transform: scale(1.3) !important;
 }
 
 /*-------- HERO------ */
@@ -406,11 +455,13 @@ img {
 }
 
 .button-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   z-index: 5;
   bottom: -50px;
   left: 50%;
-
   transform: translateX(-50%) rotate(-14deg);
   width: 114px;
   height: 114px;
@@ -423,9 +474,7 @@ img {
   letter-spacing: -0.01em;
   text-align: center;
   text-transform: uppercase;
-
   opacity: 1;
-
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -1120,7 +1169,7 @@ body.no-scroll {
 }
 
 /* Чекбоксы (кастомные точки в углу) */
-.selection-check {
+.selection-check-input {
   position: absolute;
   top: 15px;
   right: 15px;

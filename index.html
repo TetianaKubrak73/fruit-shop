@@ -29,7 +29,7 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <div class="container header-container">
         <nav class="navigation">
           <ul class="navigation-list">
@@ -37,7 +37,7 @@
               <a class="link-navigation" href="/#order">How it Works</a>
             </li>
             <li class="navigation-item">
-              <a class="link-navigation" href="/#about">Fruits</a>
+              <a class="link-navigation" href="/#products">Fruits</a>
             </li>
             <li class="navigation-item">
               <a class="link-navigation" href="/#contacts">Contacts</a>
@@ -48,15 +48,17 @@
               <use href="./image/icons.svg#icon-logo"></use></svg
             >FRESH HARVEST BOX</a
           >
-          <a class="link-bag" href="/"
+          <a class="link-bag" href="#!" data-modal-open
             ><svg class="bag-icon" width="28" height="28">
-              <use href="./image/icons.svg#icon-bag"></use></svg
-          ></a>
+              <use href="./image/icons.svg#icon-bag"></use>
+            </svg>
+            <span class="bag-count is-empty">0</span>
+          </a>
         </nav>
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section id="hero" class="hero">
         <div class="container hero-container">
           <h1 class="hero-title animate__animated animate__zoomIn">
             Fresh Harvest Box is your one-stop place for a delicious fruit
@@ -103,7 +105,7 @@
                   alt="woman"
                 />
               </div>
-              <button class="button-hero" type="button">Shop Now</button>
+              <a href="#products" class="button-hero">Shop Now</a>
             </div>
 
             <!-- Правый блок -->
@@ -131,16 +133,16 @@
 
               <ul class="hero-list">
                 <li class="hero-item">
-                  <a class="hero-tag" href="/">#ORGANIC</a>
+                  <a class="hero-tag" href="#advantages">#ORGANIC</a>
                 </li>
                 <li class="hero-item">
-                  <a class="hero-tag" href="/">#PRODUCTS</a>
+                  <a class="hero-tag" href="#products">#PRODUCTS</a>
                 </li>
                 <li class="hero-item">
-                  <a class="hero-tag" href="/">#BASKET</a>
+                  <a class="hero-tag" href="#header">#BASKET</a>
                 </li>
                 <li class="hero-item">
-                  <a class="hero-tag" href="/">#FRUITS</a>
+                  <a class="hero-tag" href="#products">#FRUITS</a>
                 </li>
               </ul>
             </div>
@@ -189,7 +191,7 @@
           />
         </div>
       </section>
-      <section id="about" class="about">
+      <section id="products" class="about">
         <div class="container about-container">
           <h2 class="about-title">ORGANIC FRUITS</h2>
           <p class="about-text">
@@ -301,7 +303,7 @@
           </button>
         </div>
       </section>
-      <section class="advantages">
+      <section id="advantages" class="advantages">
         <div class="container advantages-container">
           <h2 class="advantages-title animate__lightSpeedInRight">
             Fresh Harvest Box has got you covered
@@ -364,7 +366,7 @@
               <a class="link-navigation" href="/#order">How it Works</a>
             </li>
             <li class="navigation-item">
-              <a class="link-navigation" href="/#about">Fruits</a>
+              <a class="link-navigation" href="/#products">Fruits</a>
             </li>
           </ul>
         </nav>
@@ -445,7 +447,7 @@
                 alt="Strawberry"
                 class="selection-img"
               />
-              <input type="checkbox" class="selection-check" checked />
+              <input type="checkbox" class="selection-check-input" />
             </li>
             <li class="selection-item apple-bg">
               <h3 class="selection-name">Apple Basket</h3>
@@ -455,7 +457,7 @@
                 alt="Apple"
                 class="selection-img"
               />
-              <input type="checkbox" class="selection-check" />
+              <input type="checkbox" class="selection-check-input" />
             </li>
             <li class="selection-item fruits-bg">
               <h3 class="selection-name">Fruits Basket</h3>
@@ -465,7 +467,7 @@
                 alt="Fruits"
                 class="selection-img"
               />
-              <input type="checkbox" class="selection-check" />
+              <input type="checkbox" class="selection-check-input" />
             </li>
           </ul>
 
